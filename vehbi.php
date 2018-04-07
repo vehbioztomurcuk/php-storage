@@ -9,33 +9,16 @@ $field = '';
 $offReason = '';
 
 
-
-
-// first task: show complete incomplete or all
 if($status === 'all') {
- $order = array_keys($list);
-} else { 
-    foreach ($list as $key => $item) {
-        if ($item['complete'] == $status) {
-         $order[] = $key;
-        }
-      
-      }
-}
-
-
-
-
-
-// first task: show complete incomplete or all
-
-
-
-//second task: sort by field
-
-
-// ---> u left here. 05.38 <---
-
+    $order = array_keys($list);
+   } else { 
+       foreach ($list as $key => $item) {
+           if ($item['complete'] == $status) {
+            $order[] = $key;
+           }
+         
+         }
+   }
 
 if($field) {
     $sort = array();
@@ -45,18 +28,6 @@ if($field) {
    asort($sort);
    $order = array_keys($sort);
 }
-
-
-//second task: sort by field
-
-
-
-
-
-
-
-
-
 
 
 if($offReason) {
